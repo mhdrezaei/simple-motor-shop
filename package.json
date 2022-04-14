@@ -1,0 +1,17 @@
+{
+  "name": "motor-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass public/sass/main.scss public/css/main.css -w"
+  },
+  "keywords": [],
+  "author": "mohammad rezaei",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}

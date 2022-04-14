@@ -1,0 +1,57 @@
+[
+    {
+        "id":"0",
+        "name":"Parvaz motor",
+        "hasDiscount":true ,
+        "discount":25,
+        "orginalPrice":4000,
+        "image" :"../public/images/0.jpg",
+        "star" : 4
+    },
+    {
+        "id":"1",
+        "name":"Galexy j200",
+        "hasDiscount":true ,
+        "discount":30,
+        "orginalPrice":7500,
+        "image" :"../public/images/1.jpg",
+        "star" : 5
+    },
+    {
+        "id":"2",
+        "name":"Beneli 250",
+        "hasDiscount":true ,
+        "discount":15,
+        "orginalPrice":9000,
+        "image" :"../public/images/2.jpg",
+        "star" : 4
+    },
+    {
+        "id":"3",
+        "name":"Nami KR150",
+        "hasDiscount":true ,
+        "discount":20,
+        "orginalPrice":5000,
+        "image" :"../public/images/3.jpg",
+        "star" : 5
+    },
+    {
+        "id":"4",
+        "name":"Beneli TNT new",
+        "hasDiscount":true ,
+        "discount":10,
+        "orginalPrice":8500,
+        "image" :"../public/images/4.jpg",
+        "star" : 4
+    },
+    {
+        "id":"5",
+        "name":"Honta click 150",
+        "hasDiscount":true ,
+        "discount":15,
+        "orginalPrice":8000,
+        "image" :"../public/images/5.jpg",
+        "star" : 5
+    }
+
+]

@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 43.75%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  font-family: cursive;
+  box-sizing: border-box;
+  background-image: linear-gradient(to bottom right, #66c4f9, #02387f); }
+
+.container {
+  width: 1320px;
+  margin: 0 auto; }
+  @media (max-width: 75em) {
+    .container {
+      width: 960px;
+      padding: 0 7.5rem; } }
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  margin-right: calc(-.5 * var(--bs-gutter-x)); }
+
+.main-title {
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem; }
+
+.product {
+  width: 31%;
+  position: relative;
+  margin: 1rem; }
+  .product__content {
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem; }
+  .product__discount {
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: orangered;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    transform: rotateZ(-40deg); }
+  .product__img img {
+    display: block;
+    max-width: 100%;
+    height: auto; }
+  .product__title {
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem 1rem; }
+  .product__price {
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 2rem 1rem; }
+
+.product-single {
+  width: 80%;
+  position: relative;
+  margin: 1rem auto; }
+  .product-single__content {
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem; }
+  .product-single__discount {
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: orangered;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    transform: rotateZ(-40deg); }
+  .product-single__img img {
+    display: block;
+    max-width: 100%;
+    height: auto; }
+  .product-single__title {
+    font-size: 2rem;
+    text-align: left;
+    padding: 2rem 1rem; }
+  .product-single__price {
+    text-align: left;
+    font-size: 1.7rem;
+    padding: 2rem 1rem; }
+  .product-single hr {
+    margin: 1rem; }
+  .product-single__description {
+    padding: 1rem 2rem;
+    font-size: 1.8rem; }

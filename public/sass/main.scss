@@ -1,0 +1,183 @@
+$white : #fff;
+$black : #000;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @mixin respond($breakpoint) {
+
+    @if $breakpoint == phone {
+        @media (max-width : 37.5em) { @content}
+            }
+    @if $breakpoint == tab-port {
+        @media (max-width : 56.25em) { @content}
+            }
+    @if $breakpoint == desktop {
+        @media (max-width : 75em) { @content}
+            }       
+    @if $breakpoint == larg-desktop {
+        @media (min-width : 112.5em) { @content}
+            }    
+}
+  html{
+      font-size: 62.5%;
+
+      @include respond(desktop){
+        font-size: 56.25%;
+      }
+      @include respond(tab-port){
+          font-size: 50%;
+      }
+      @include respond(phone){
+        font-size: 43.75%;
+    }
+     
+      @include respond(larg-desktop){
+          font-size: 75%;
+      }
+
+    
+  }
+ body{
+    font-family: cursive;
+     box-sizing : border-box;
+     background-image: linear-gradient(to bottom right, #66c4f9, #02387f);
+ }
+
+ .container{
+     width: 1320px;
+     margin: 0 auto;
+    @include respond(desktop){
+        width: 960px;
+        padding: 0 7.5rem;
+    }
+
+    @include respond(large-desktop){
+        width: 1140px;
+        padding: 0 7.5rem;
+    }
+ }
+ .row{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+ }
+
+ .main-title{
+     color : $white;
+     font-size: 5rem;
+     text-align: center;
+     padding: 2rem;
+ }
+
+ .product{
+     width: 31%;
+     position: relative;
+     margin: 1rem;
+
+     &__content{
+         width: 100%;
+         background: $white;
+         padding: 1rem;
+         border-radius: 0.5rem;
+     }
+
+     &__discount{
+        position: absolute;
+        width: 7rem;
+        height: 7rem;
+        font-size: 1.4rem;
+        color: #fff;
+        background-color: orangered;
+        display: inline-block;
+        border-radius: 50%;
+        padding: 2rem;
+        text-align: center;
+        transform: rotateZ(-40deg);
+     }
+
+     &__img img{
+        display: block;
+       max-width: 100%;
+       height: auto;
+    }
+
+     &__title{
+         font-size: 2rem;
+         text-align: center;
+         padding: 2rem 1rem ;
+     }
+
+     &__price{
+         text-align: center;
+         font-size: 1.7rem;
+         padding: 2rem 1rem;
+     }
+
+
+     
+
+ }
+
+ .product-single{
+    width: 80%;
+    position: relative;
+    margin: 1rem auto;
+
+    &__content{
+        width: 100%;
+        background: $white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    &__discount{
+       position: absolute;
+       width: 7rem;
+       height: 7rem;
+       font-size: 1.4rem;
+       color: #fff;
+       background-color: orangered;
+       display: inline-block;
+       border-radius: 50%;
+       padding: 2rem;
+       text-align: center;
+       transform: rotateZ(-40deg);
+    }
+
+    &__img img{
+       display: block;
+      max-width: 100%;
+      height: auto;
+   }
+
+    &__title{
+        font-size: 2rem;
+        text-align: left;
+        padding: 2rem 1rem ;
+    }
+
+    &__price{
+        text-align: left;
+        font-size: 1.7rem;
+        padding: 2rem 1rem;
+    }
+
+    & hr{
+        margin: 1rem;
+    }
+
+    &__description{
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+    }
+
+
+    
+
+}
