@@ -10,6 +10,7 @@ const server = http.createServer(async(req,res)=>{
     const pathName = myURL.pathname;
     const id = myURL.searchParams.get('id');
 
+    console.log(req.url);
     if(pathName === '/'){
         const html = await fs.readFile('./view/shop.html','utf-8');
         res.writeHead(200,{'Content-Type' : 'text/html'});
@@ -18,15 +19,26 @@ const server = http.createServer(async(req,res)=>{
         const html = await fs.readFile('./view/product.html','utf-8');
         res.writeHead(200,{'Content-Type' : 'text/html'});
         res.end(html);
-    }else{
+    }
+    else if(/\.(jpg)$/i.test(req.url)){
+
+        const image = await fs.readFile(`./public/images/${req.url.slice(1)}`);
+        res.writeHead(200,{'Content-Type' : 'image/jpg'});
+        res.end(image);
+    }
+    else if(/\.(css)$/i.test(req.url)){
+
+        const image = await fs.readFile(`./public/css/main.css`);
+        res.writeHead(200,{'Content-Type' : 'text/css'});
+        res.end(image);
+    }
+    
+    else{
         res.writeHead(404,{'Content-Type' : 'text/html'});
         res.end('page not found');
     }
 
     
-
-    res.writeHead(200,{'Content-Type' : 'text/html'});
-    res.end('<h1>Wellcome to motor shop </h1>');
 })
 
 server.listen(3000);
