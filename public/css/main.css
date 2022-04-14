@@ -79,6 +79,16 @@ body {
     text-align: center;
     font-size: 1.7rem;
     padding: 2rem 1rem; }
+    .product__price--discount {
+      position: relative; }
+      .product__price--discount::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #f70303;
+        position: absolute;
+        bottom: 10px;
+        left: 0; }
 
 .product-single {
   width: 80%;
@@ -113,6 +123,16 @@ body {
     text-align: left;
     font-size: 1.7rem;
     padding: 2rem 1rem; }
+    .product-single__price--discount {
+      position: relative; }
+      .product-single__price--discount::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #f70303;
+        position: absolute;
+        bottom: 10px;
+        left: 0; }
   .product-single hr {
     margin: 1rem; }
   .product-single__description {

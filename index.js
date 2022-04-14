@@ -1,6 +1,7 @@
 const http = require('http');
 const url = require('url');
 const fs = require('fs').promises;
+const data = require('./data/data.json');
 
 const server = http.createServer(async(req,res)=>{
     console.log('server is running');
@@ -16,9 +17,29 @@ const server = http.createServer(async(req,res)=>{
         res.writeHead(200,{'Content-Type' : 'text/html'});
         res.end(html);
     }else if(pathName === '/product' && id >= 0 && id <= 5){
-        const html = await fs.readFile('./view/product.html','utf-8');
+        let html = await fs.readFile('./view/product.html','utf-8');
+
+        const motors = data.find((motor) => motor.id === id);
+        console.log(motors);
+
+        html = html.replace(/<%IMAGE%>/g,motors.image);
+        html = html.replace(/<%NAME%>/g,motors.name);
+        html = html.replace(/<%PRICE%>/g,motors.orginalPrice);
+
+
+        if(motors.hasDiscount){
+            const discountPrice = motors.orginalPrice * (100 - motors.discount) / 100;
+            html = html.replace(/<%DISCOUNTPRICE%>/g,discountPrice);
+
+        }
+
+
         res.writeHead(200,{'Content-Type' : 'text/html'});
         res.end(html);
+
+        
+
+        
     }
     else if(/\.(jpg)$/i.test(req.url)){
 

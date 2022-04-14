@@ -5,7 +5,7 @@
         "hasDiscount":true ,
         "discount":25,
         "orginalPrice":4000,
-        "image" :"../public/images/0.jpg",
+        "image" :"/0.jpg",
         "star" : 4
     },
     {
@@ -14,7 +14,7 @@
         "hasDiscount":true ,
         "discount":30,
         "orginalPrice":7500,
-        "image" :"../public/images/1.jpg",
+        "image" :"/1.jpg",
         "star" : 5
     },
     {
@@ -23,7 +23,7 @@
         "hasDiscount":true ,
         "discount":15,
         "orginalPrice":9000,
-        "image" :"../public/images/2.jpg",
+        "image" :"/2.jpg",
         "star" : 4
     },
     {
@@ -32,7 +32,7 @@
         "hasDiscount":true ,
         "discount":20,
         "orginalPrice":5000,
-        "image" :"../public/images/3.jpg",
+        "image" :"/3.jpg",
         "star" : 5
     },
     {
@@ -41,7 +41,7 @@
         "hasDiscount":true ,
         "discount":10,
         "orginalPrice":8500,
-        "image" :"../public/images/4.jpg",
+        "image" :"/4.jpg",
         "star" : 4
     },
     {
@@ -50,7 +50,7 @@
         "hasDiscount":true ,
         "discount":15,
         "orginalPrice":8000,
-        "image" :"../public/images/5.jpg",
+        "image" :"/5.jpg",
         "star" : 5
     }
 
